@@ -85,7 +85,7 @@ const UselessGapsPrefsWidget = new GObject.Class({
     this._grid._add(noGapsForMaximizedWindowsCheckBox);
 
     this._spinMarginTop = new Gtk.SpinButton;
-    this._spinMarginTop.set_range(0, 300);
+    this._spinMarginTop.set_range(-300, 300);
     this._spinMarginTop.set_increments(1, 1);
 
     let label_margin_top = new UI.Label('Extra margin top')
@@ -94,7 +94,7 @@ const UselessGapsPrefsWidget = new GObject.Class({
     this._settings.bind("margin-top", this._spinMarginTop, "value", Gio.SettingsBindFlags.DEFAULT);
 
     this._spinMarginBottom = new Gtk.SpinButton;
-    this._spinMarginBottom.set_range(0, 300);
+    this._spinMarginBottom.set_range(-300, 300);
     this._spinMarginBottom.set_increments(1, 1);
 
     let label_margin_bottom = new UI.Label('Extra margin bottom')
@@ -103,7 +103,7 @@ const UselessGapsPrefsWidget = new GObject.Class({
     this._settings.bind("margin-bottom", this._spinMarginBottom, "value", Gio.SettingsBindFlags.DEFAULT);
 
     this._spinMarginLeft = new Gtk.SpinButton;
-    this._spinMarginLeft.set_range(0, 300);
+    this._spinMarginLeft.set_range(0-300, 300);
     this._spinMarginLeft.set_increments(1, 1);
 
     let label_margin_left = new UI.Label('Extra margin left')
@@ -112,7 +112,7 @@ const UselessGapsPrefsWidget = new GObject.Class({
     this._settings.bind("margin-left", this._spinMarginLeft, "value", Gio.SettingsBindFlags.DEFAULT);
 
     this._spinMarginRight = new Gtk.SpinButton;
-    this._spinMarginRight.set_range(0, 300);
+    this._spinMarginRight.set_range(-300, 300);
     this._spinMarginRight.set_increments(1, 1);
 
     let label_margin_right = new UI.Label('Extra margin right')
